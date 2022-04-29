@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Formulário: Gato vs Cachorro</h1>
+        </header>
+        <p>Qual é seu animal doméstico preferido entre esses dois?</p>
+    </main>
+    <section>
+        <form action="./form-content/" method="post">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" />
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Eu prefiro</legend>
+                    <p>
+                        <input type="radio" name="animal" id="animal_1" value="gato" />
+                        <label for="animal_1">Gato</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="animal" id="animal_2" value="cachorro" />
+                        <label for="animal_2">Cachorro</label>
+                    </p>
+                </fieldset>
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
