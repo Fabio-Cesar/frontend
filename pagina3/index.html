@@ -9,32 +9,78 @@
 <body>
     <main>
         <header>
-            <h1>Formulário: Gato vs Cachorro</h1>
+            <h1>Formulário: Sem Contexto</h1>
         </header>
-        <p>Qual é seu animal doméstico preferido entre esses dois?</p>
+        <p>Um formulário para utilizar diversos valores de entrada e tags para formulários.</p>
+        <p><b style="color:red;">*</b> = Indica um campo de preenchimento obrigatório.</p>
     </main>
     <section>
-        <form action="./form-content/" method="post">
-            <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" />
-            </div>
-            <div>
-                <fieldset>
-                    <legend>Eu prefiro</legend>
-                    <p>
-                        <input type="radio" name="animal" id="animal_1" value="gato" />
-                        <label for="animal_1">Gato</label>
-                    </p>
-                    <p>
-                        <input type="radio" name="animal" id="animal_2" value="cachorro" />
-                        <label for="animal_2">Cachorro</label>
-                    </p>
-                </fieldset>
-            </div>
-            <div>
+        <form action="/form-content/" method="post">
+            <p>
+                <label for="nome">Nome:<b style="color:red;">*</b></label>
+                <input type="text" id="nome" name="nome" required/>
+            </p>
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" />
+            </p>
+            <p>
+                <label for="dn">Data de Nascimento:</label>
+                <input type="date" id="dn" name="data-de-nascimento" />
+            </p>
+            <p>
+                <label for="git">Link do perfil Github:</label>
+                <input type="url" id="git" name="github" />
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </p>
+            <fieldset>
+                <legend>Selecione as imagens que te agradam:</legend>
+                <input type="checkbox" id="1" name="image" value="1">
+                <label for="1"><img src="./images/1.jpg" style="height:100px;width:150px;" /></label>
+                <input type="checkbox" id="2" name="image" value="2">
+                <label for="2"><img src="./images/2.jpg" style="height:100px;width:150px;" /></label>
+                <input type="checkbox" id="3" name="image" value="3">
+                <label for="3"><img src="./images/3.jpg" style="height:100px;width:150px;" /></label>
+                <input type="checkbox" id="4" name="image" value="4">
+                <label for="4"><img src="./images/4.jpg" style="height:100px;width:150px;" /></label>
+            </fieldset>
+            <fieldset>
+                <legend>Eu prefiro<b style="color:red;">*</b></legend>
+                <input type="radio" name="animal" id="animal_1" value="gato" required/>
+                <label for="animal_1">Gato</label>
+                <input type="radio" name="animal" id="animal_2" value="cachorro" />
+                <label for="animal_2">Cachorro</label>
+            </fieldset>
+            <p>
+                <label for="cor">Cor preferida do Arco-Íris:</label>
+                <select name="cor" id="cor">
+                    <option value="none"></option>
+                    <option value="red">Vermelho</option>
+                    <option value="orange">Laranja</option>
+                    <option value="yellow">Amarelo</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Azul</option>
+                    <option value="indigo">Azul Escuro</option>
+                    <option value="violet">Violeta</option>
+                </select>
+            </p>
+            <p>
+                <label for="animado">Avalie seu grau de animação:</label>
+                <input type="range" id="animado" name="animado" min="0" max="10" step="1" list="value" />
+                <datalist id="value">
+                    <option value="0"></option>
+                    <option value="5"></option>
+                    <option value="10"></option>
+                </datalist>
+            </p>
+            <input type="hidden" id="escondido" name="usuarionaove" value="maseditanodevtools" />
+            <p>
                 <button type="submit">Enviar</button>
-            </div>
+                <button type="reset">Limpar</button>
+            </p>
         </form>
     </section>
 </body>
